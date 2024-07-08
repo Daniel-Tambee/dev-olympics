@@ -11,14 +11,14 @@ pub struct NftMinted {
 pub struct CollectionMinted {
     pub mint: Pubkey,
     pub name: Pubkey,
-    pub createdAt: u32,
+    pub created_at: u32,
 }
 
 #[event]
 pub struct NftTransfered {
     pub mint: Pubkey,
-    pub newOwner: Pubkey,
-    pub updatedAt: u32,
+    pub new_owner: Pubkey,
+    pub updated_at: u32,
 }
 
 #[event]
