@@ -8,8 +8,6 @@ pub struct Initialize<'info> {
         init,
         space = std::mem::size_of::<Vault>() + 8,
         payer = signer,
-        seeds = [SEED.as_bytes()],
-        bump
     )]
     pub vault: Account<'info, Vault>,
     #[account(mut)]
