@@ -1,7 +1,6 @@
 use std::borrow::BorrowMut;
 
 use anchor_lang::prelude::*;
-use chrono::prelude::*;
 use crate::{ models::NftItem, NFT_SEED };
 
 #[derive(Accounts)]
@@ -20,14 +19,12 @@ pub struct MintNft<'info> {
 }
 
 pub fn mint_nft(ctx: Context<MintNft>, price: Option<u32>, file_path: String) -> Result<()> {
-    let now: DateTime<Utc> = Utc::now();
-
     let nft = ctx.accounts.nft.borrow_mut();
     nft.uri = file_path;
     nft.price = price;
     nft.owner = ctx.accounts.owner.key();
-    nft.created_at = now.to_rfc3339();
-    nft.updated_at = now.to_rfc3339();
+    nft.created_at = "".to_string();
+    nft.updated_at = "".to_string();
     Ok(())
 }
 pub fn transferNft() {}
