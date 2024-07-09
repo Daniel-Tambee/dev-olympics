@@ -19,4 +19,7 @@ pub mod dev_olympics {
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
         initialize::handler(ctx)
     }
+    pub fn mint_nft(ctx: Context<MintNft>, price: Option<u32>, file_path: String) -> Result<()> {
+        instructions::mint_nft(ctx, price, file_path)
+    }
 }
