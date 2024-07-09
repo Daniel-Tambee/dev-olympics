@@ -4,7 +4,7 @@ use anchor_lang::prelude::*;
 pub struct NftMinted {
     pub mint: Pubkey,
     pub uri: String,
-    pub created_at: u32,
+    pub created_at: String,
 }
 
 #[event]
