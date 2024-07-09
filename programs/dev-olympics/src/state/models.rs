@@ -7,15 +7,15 @@ pub struct NftItem {
     pub owner: Pubkey,
     pub uri: String,
     pub price: Option<u32>,
-    pub createdAt: String,
-    pub updatedAt: String,
+    pub created_at: String,
+    pub updated_at: String,
 }
 
 #[account]
 #[derive(Default)]
 pub struct Vault {
     pub items: Option<Vec<Pubkey>>,
-    pub updatedAt: u32,
+    pub updated_at: u32,
 }
 
 #[account]
@@ -27,6 +27,6 @@ pub struct Collection {
     pub buyer: Option<Pubkey>,
     pub items: Vec<Pubkey>,
     pub price: Option<u32>,
-    pub createdAt: String,
-    pub updatedAt: String,
+    pub created_at: String,
+    pub updated_at: String,
 }
