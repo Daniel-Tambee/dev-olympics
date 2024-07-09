@@ -29,13 +29,13 @@ pub struct CollectionTransfered {
 }
 
 #[event]
-pub struct vaultIncrement {
+pub struct VaultIncrement {
     pub mint: Pubkey,
-    pub updatedAt: u32,
+    pub updated_at: u32,
 }
 
 #[event]
-pub struct vaultDecrement {
+pub struct VaultDecrement {
     pub mint: Pubkey,
-    pub updatedAt: u32,
+    pub updated_at: u32,
 }
