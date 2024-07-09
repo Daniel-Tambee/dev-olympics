@@ -15,7 +15,7 @@ pub struct NftItem {
 #[derive(Default)]
 pub struct Vault {
     pub items: Option<Vec<Pubkey>>,
-    pub updated_at: u32,
+    pub updated_at: String,
 }
 
 #[account]
