@@ -22,6 +22,7 @@ pub fn mint_nft(ctx: Context<MintNft>, price: Option<u32>, file_path: String) ->
     let nft = ctx.accounts.nft.borrow_mut();
     nft.uri = file_path;
     nft.price = price;
+    nft.mint = nft.mint;
     nft.owner = ctx.accounts.owner.key();
     nft.created_at = "".to_string();
     nft.updated_at = "".to_string();
