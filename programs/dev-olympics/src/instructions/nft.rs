@@ -21,7 +21,6 @@ pub struct MintNft<'info> {
     pub issuer: AccountInfo<'info>,
     pub system_program: Program<'info, System>,
     pub rent: AccountInfo<'info>,
-    #[account(signer)]
     pub spl_token_program: AccountInfo<'info>,
     pub program_clock_sysvar: AccountInfo<'info>,
 }
